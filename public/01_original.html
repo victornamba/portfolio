@@ -1,0 +1,95 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/project.css" />
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
+<link rel="icon" href="img/32x32.ico" sizes="16x16 32x32 48x48 64x64" type="image/ico">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Victor Namba">
+<script> let refreshLogin = true; if(refreshLogin) sessionStorage.removeItem('access');</script>
+<meta charset="UTF-8">
+<title>Victor Namba • Hub XP</title>
+</head>
+<body>
+<div class="content" style="text-align: center;">
+  <header>
+    <a href="index.html" style="opacity: 1 !important;">
+      <img src="img/vn.svg" class="logo" id="logo" alt="victornamba" />
+    </a>
+    <nav>
+      <ul>
+        <li><a class="one" href="work.html">work</a></li>
+        <li><a class="one" href="others.html">others</a></li>
+        <li><a class="one" href="about.html">about</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="title" id="black">
+    Hub XP
+  </div>
+  <div class="txt" id="small" style="margin: 0 20% 0 20%;">
+    <p>This content is protected. To view, please enter the password</p>
+  </div>
+  <div class="login">
+    <input type="password" name="get-pass" id="get-pass" placeholder="Password" autofocus="true" class="text-field h3"> 
+    <button class="btn-acessar btn-class">Confirm</button>
+    <p class="msg-error">Incorrect password</p>
+  </div>
+  <div class="footer">
+    <div class="footerlink" id="medium"><a href="work.html">All</a></div>
+    <div class="footerlink" id="medium">Hub XP</div>
+    <div class="footerlink" id="medium"><a href="02.html">Sympla</a></div>
+    <div class="footerlink" id="medium"><a href="03.html">Ingresso Rápido</a></div>
+    <div class="footerlink" id="medium"><a href="04.html">Rápido</a></div>
+    <div class="footerlink" id="medium"><a href="05.html">iFood</a></div>
+  </div>
+</div>
+  <div class="conteudo"></div>
+<style>
+::placeholder { /* Firefox */ color: #9B9B9B; opacity: 1;  }
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ color: #9B9B9B; opacity: 1; }
+::-ms-input-placeholder { /* Microsoft Edge */ color: #9B9B9B; opacity: 1; }
+</style>
+  <script>
+    let password = 'YXBwbGU=';
+    let string = 'aHR0cDovL25hbWJhLmRlc2lnbi9fLmh0bWw=';
+    let $getPass = '#get-pass';
+    let $btnAcessar = '.btn-acessar';
+    let btnAcessar = document.querySelector($btnAcessar);
+    let content = document.querySelector('.conteudo');
+    let login = document.querySelector('.login');
+    let msgError = document.querySelector('.msg-error');
+
+    function setAccess(){
+      if(sessionStorage.length > 0){
+        sessionStorage.getItem('access') ? (
+          content.classList.add('show'),
+          login.classList.add('hide')        
+        ):(
+          content.classList.remove('show'),
+          login.classList.remove('hide')
+        )
+      }else{
+        content.classList.remove('show');
+        login.classList.remove('hide');
+      }
+    }
+
+    btnAcessar.addEventListener('click', function(){
+      let getPass = document.querySelector($getPass).value;
+      let keyPass = btoa(getPass);
+      
+      
+      password == keyPass ? (
+        sessionStorage.setItem('access',true),
+        setAccess(),
+        window.open(atob(string), '_self')
+      ) : (
+        setAccess(false),
+        msgError.classList.add('show'),
+        document.querySelector($getPass).value = ''
+      )
+    });
+    setAccess();
+  </script>
+</body>
+</html>

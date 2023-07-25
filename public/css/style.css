@@ -1,0 +1,129 @@
+*{ border:0px; margin:0px; padding:0px; list-style:none }
+html,body,#bg,#bg table,#bg td,#cont{ overflow: auto; background: url("../img/bg.jpg") no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-color: #F1F1F1; }
+@-webkit-keyframes fadein { from{ opacity: 0; color: #FFF; } to { opacity: 1; }}
+@-webkit-keyframes mymove { 100% {-webkit-transform: rotate(180deg);} }
+@keyframes mymove { 100% {transform: rotate(180deg);} }
+a:link, a:visited, a:active { text-decoration: none; color: #383838; font-weight: bold; opacity: 1; transition: opacity .5s ease-out; -moz-transition: opacity .5s ease-out; -webkit-transition: opacity .3s ease-out; -o-transition: opacity .5s ease-out; }
+a:hover { text-decoration: none; color: #2C85FF; opacity: 1; transition: opacity 1s ease-out; -moz-transition: opacity .5s ease-out; -webkit-transition: opacity .5s ease-out; -o-transition: opacity .3s ease-out; }	
+
+.content { margin: 5% 10% 10% 10% }
+.logo { width: 100px; height: 100px; background: url("../img/vn.svg") no-repeat center center; background-size: cover; }
+.title { margin-top: 10%; }
+.txt  { width: 100%; padding-top: 5%; padding-bottom: 10%; }
+#black { font-family: 'Avenir LT 65'; font-weight: bold; font-style: normal; font-size: 52px; color: #383838; }
+#medium { font-family: 'Avenir LT 65'; font-weight: bold; font-style: normal; font-size: 20px; color: #383838; line-height: 2; }
+#small { font-family: 'Avenir LT 65'; font-weight: 500; font-style: normal; font-size: 16px; color: #383838; line-height: 2; }
+.home_title { font-family: 'Avenir LT 65'; font-weight: bold; font-style: normal; font-size: 50px; color: #FFF; }
+.home_description { font-family: 'Avenir LT 65'; font-weight: normal; font-style: normal; font-size: 20px; color: #FFF; }
+#vn { -webkit-animation: mymove 6s; /* Chrome, Safari, Opera */; animation: mymove 6s; }
+v { color: #2C85FF;}
+/*
+.left { width: auto; height: auto; float: left; }
+.right { width: auto; height: auto; margin-left: 50%; } 
+*/
+
+/*
+#project01 { width: 25%; height: 316px; display: inline-block; background: url("../img/project01.png") no-repeat center center; background-size: cover; }
+#project02 { width: 25%; height: 316px; margin-left: 25%; background: url("../img/project02.png") no-repeat center center; background-size: cover; }
+#project03 { width: 25%; height: 316px; margin-left: 25%; background: url("../img/project03.png") no-repeat center center; background-size: cover; }
+#project04 { width: 25%; height: 316px; margin-left: 25%; background: url("../img/project04.png") no-repeat center center; background-size: cover; }
+*/
+
+/*
+#project01 { width: 50%; height: 1000px; float: left; background: url("../img/project01.png") no-repeat center center; background-size: cover; }
+#project02 { width: 50%; height: 500px; margin-left: 50%; background: url("../img/project02.png") no-repeat center center; background-size: cover; }
+#project03 { width: 50%; height: 500px; margin-left: 50%;  background: url("../img/project03.png") no-repeat center center; background-size: cover; }
+#project04 { width: 50% height: 50%; float: left; background: url("../img/project04.png") no-repeat center center; background-size: cover; }
+#project03 { width: 50%; height: 400px; margin-left: 50%;  background: url("../img/project01.png") no-repeat center center; background-size: cover; }
+*/
+
+/*
+#project01 { width: 100%; height: 80%; background: url("../img/project01.png") no-repeat center center; background-size: cover; }
+#project02 { width: 50%; height: 50%; float: left; background: url("../img/project01.png") no-repeat center center; background-size: cover; }
+#project03 { width: 50%; height: 50%; margin-left: 50%;  background: url("../img/project02.png") no-repeat center center; background-size: cover; }
+#project04 { width: 50%; height: 50%; float: left; background: url("../img/project03.png") no-repeat center center; background-size: cover; }
+#project05 { width: 50%; height: 50%; margin-left: 50%;  background: url("../img/project04.png") no-repeat center center; background-size: cover; }
+*/
+
+.cover { width: 100%; padding-top: 10%; }
+#cover01 { height: 80%; background: url("../img/portfolio/cover/01.png") no-repeat 50% 50%; background-size: cover; }
+#cover02 { height: 80%; background: url("../img/portfolio/cover/02.png") no-repeat 50% 50%; background-size: cover; }
+#cover03 { height: 80%; background: url("../img/portfolio/cover/03.png") no-repeat 50% 50%; background-size: cover; }
+#cover04 { height: 80%; background: url("../img/portfolio/cover/04.png") no-repeat 50% 50%; background-size: cover; }
+#cover05 { height: 80%; background: url("../img/portfolio/cover/05.png") no-repeat 50% 50%; background-size: cover; }
+
+@media (min-width: 320px) {
+.content { margin-top: 15%; }
+.logo { width: 50px; height: 50px; }
+.txt  { width: 100%; padding-top: 8%; padding-bottom: 10%; }
+.home_title { font-size: 16px; }
+.home_description { font-size: 10px; }
+#black { font-size: 20px; }
+#small { font-size: 12px; line-height: 1.5; }
+#cover01 { height: 30%; }
+#cover02 { height: 30%; }
+#cover03 { height: 30%; }
+#cover04 { height: 30%; }
+#cover05 { height: 30%; }
+}
+
+@media (min-width: 768px) {
+.content { margin-top: 10%; }
+.logo { width: 80px; height: 80px; }
+.home_title { font-size: 18px; }
+.home_description { font-size: 12px; }
+#black { font-size: 36px; }
+#small { font-size: 10px; }
+#cover01 { height: 30%; }
+#cover02 { height: 30%; }
+#cover03 { height: 30%; }
+#cover04 { height: 30%; }
+#cover05 { height: 30%; }
+}
+
+@media (min-width: 960px) {
+.content { margin: 5% 10% 10% 10% }
+.logo { width: 50px; height: 50px; }
+#black {  font-size: 30px; }
+#small { font-size: 14px; }
+#cover01 { height: 60%; }
+#cover02 { height: 60%; }
+#cover03 { height: 60%; }
+#cover04 { height: 60%; }
+#cover05 { height: 60%; }
+}
+
+@media (min-width: 1024px) {
+#cover01 { height: 80%; }
+#cover02 { height: 80%; }
+#cover03 { height: 80%; }
+#cover04 { height: 80%; }
+#cover05 { height: 80%; }
+}
+
+@media (min-width: 1440px) {
+.logo { width: 80px; height: 80px; }
+.home_title { font-size: 40px; }
+.home_description { font-size: 16px; }
+#black { font-size: 46px; }
+#small { font-size: 16px; }
+}
+
+@media (min-width: 1920px) {
+.logo { width: 100px; height: 100px; }
+.home_title { font-size: 56px; }
+.home_description { font-size: 22px; }
+#black { font-size: 62px; }
+#small { font-size: 22px; }
+#cover01 { height: 80%; }
+#cover02 { height: 80%; }
+#cover03 { height: 80%; }
+#cover04 { height: 80%; }
+#cover05 { height: 80%; }
+}
+
+@media (min-width: 2560px) {
+.logo { width: 140px; height: 140px; }
+#black { font-size: 80px; }
+#small { font-size: 24px; }
+}
